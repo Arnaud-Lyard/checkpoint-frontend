@@ -1,17 +1,12 @@
-import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 
-//https://www.apollographql.com/docs/react/networking/authentication/#cookie
-const client = new ApolloClient({
+// eslint-disable-next-line import/no-anonymous-default-export
+export default new ApolloClient({
+  uri: process.env.REACT_APP_GRAPHQL_API_URL,
   cache: new InMemoryCache(),
   defaultOptions: {
     query: {
       fetchPolicy: "cache-first",
     },
   },
-  link: createHttpLink({
-    uri: process.env.REACT_APP_GRAPHQL_API_URL,
-    credentials: "include",
-  }),
 });
-
-export default client;
