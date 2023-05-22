@@ -5,6 +5,7 @@ import { useContinentsQuery } from "../gql/generated/schema";
 export default function ContinentsList() {
   const { data } = useContinentsQuery();
   const continents = data?.continents || [];
+  console.log(continents);
 
   return (
     <>

@@ -11,11 +11,8 @@ function App() {
       <main className="container pb-8 bg-cream">
         <Routes>
           <Route path="/" element={<ContinentsList />} />
-          <Route path="/continents/:id/countries" element={<CountriesList />} />
-          <Route
-            path="/continents/:id/country/:id"
-            element={<CountryDetail />}
-          />
+          <Route path="/:id" element={<CountriesList />} />
+          <Route path="/:id/country/:id" element={<CountryDetail />} />
         </Routes>
       </main>
     </>

@@ -2,9 +2,5 @@ query continents {
   continents {
     code
     name
-    countries {
-      code
-      name
-    }
   }
 }
