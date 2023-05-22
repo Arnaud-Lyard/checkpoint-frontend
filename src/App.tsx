@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, Routes } from "react-router";
+import ContinentsList from "./screens/ContinentsList";
+import CountriesList from "./screens/CountriesList";
+import CountryDetail from "./screens/CountryDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main className="container pb-8 bg-cream">
+        <Routes>
+          <Route path="/" element={<ContinentsList />} />
+          <Route path="/continents/:id/countries" element={<CountriesList />} />
+          <Route
+            path="/continents/:id/country/:id"
+            element={<CountryDetail />}
+          />
+        </Routes>
+      </main>
+    </>
   );
 }
 
