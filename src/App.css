@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid grey;
+}
+.wrapper_link {
+  text-decoration: none;
+  color: black;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
